@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="An accessible news portal demonstrating inclusive frontend design.">
+<title>Accessible News Hub</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header"><div class="container header-inner">
+<a class="logo" href="#" aria-label="Accessible News Hub home">Accessible News Hub</a>
+<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu"><span aria-hidden="true">☰</span> Menu</button>
+<nav id="primary-navigation" class="navigation" aria-label="Primary navigation">
+<a href="#latest">Latest</a><a href="#technology">Technology</a><a href="#community">Community</a><a href="#about">About</a>
+</nav></div></header>
+<main id="main-content" tabindex="-1">
+<section class="hero" aria-labelledby="hero-title"><div class="container">
+<p class="eyebrow">Inclusive information portal</p><h1 id="hero-title">News for Everyone</h1>
+<p class="hero-copy">Clear stories, simple navigation and an interface designed with accessibility in mind.</p>
+<a class="button primary" href="#latest">Explore latest stories</a>
+</div></section>
+<section id="latest" class="container section" aria-labelledby="latest-title">
+<div class="section-heading"><div><p class="eyebrow">Today</p><h2 id="latest-title">Latest Stories</h2></div>
+<button id="contrast-button" class="button secondary" type="button" aria-pressed="false">High contrast</button></div>
+<div class="news-grid">
+<article class="news-card"><div class="card-icon" aria-hidden="true">⌨</div><p class="category">Accessibility</p><h3>Designing Websites That Work Without a Mouse</h3><p>Keyboard-friendly interfaces help people navigate websites using Tab, Shift+Tab and Enter.</p><button class="read-more" type="button" data-title="Designing Websites That Work Without a Mouse" data-text="Keyboard navigation is an important part of accessible web design. Clear focus indicators, logical tab order and usable buttons make interfaces easier to operate.">Read summary</button></article>
+<article class="news-card" id="technology"><div class="card-icon" aria-hidden="true">💻</div><p class="category">Technology</p><h3>Small UI Changes Can Improve Digital Experiences</h3><p>Good spacing, readable text, useful labels and clear feedback can make interfaces easier to use.</p><button class="read-more" type="button" data-title="Small UI Changes Can Improve Digital Experiences" data-text="Accessible design benefits many users. Descriptive labels, sufficient contrast and responsive layouts help people interact with content on different devices.">Read summary</button></article>
+<article class="news-card" id="community"><div class="card-icon" aria-hidden="true">♿</div><p class="category">Community</p><h3>Inclusive Design Starts With Listening to Users</h3><p>Testing with different users helps teams discover barriers that may not be visible during development.</p><button class="read-more" type="button" data-title="Inclusive Design Starts With Listening to Users" data-text="Accessibility is more effective when it is considered throughout development. Feedback from users can reveal navigation, content and interaction problems early.">Read summary</button></article>
+</div></section>
+<section id="about" class="about-section" aria-labelledby="about-title"><div class="container narrow">
+<p class="eyebrow">Accessibility focus</p><h2 id="about-title">Built for Different Ways of Using the Web</h2>
+<p>This interface uses semantic HTML, descriptive labels, visible focus states, keyboard-friendly controls, responsive layouts and an optional high-contrast mode.</p>
+<form class="feedback-form"><h3>Send Feedback</h3>
+<div class="form-group"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required></div>
+<div class="form-group"><label for="message">Your feedback</label><textarea id="message" name="message" rows="4" required></textarea></div>
+<button class="button primary" type="submit">Submit feedback</button><p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+</form></div></section>
+</main>
+<div id="summary-modal" class="modal-backdrop" hidden><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-description" tabindex="-1">
+<button id="close-modal" class="close-button" type="button" aria-label="Close dialog">×</button><h2 id="modal-title">Article summary</h2><p id="modal-description"></p>
+</section></div>
+<footer class="site-footer"><div class="container"><p>© 2026 Accessible News Hub. Built as a frontend accessibility project.</p></div></footer>
+<script src="script.js"></script>
+</body></html>
